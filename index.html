@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SALIM AD | Finance Student &amp; Web Developer</title>
+  <meta name="description" content="Portfolio of SALIM AD, an Accounting & Finance student in Addis Ababa learning web development and data analytics.">
+  <link rel="canonical" href="https://salim-ad.netlify.app/">
+
+  <!-- Tab icon: SVG for modern browsers, PNGs as fallbacks -->
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <meta name="theme-color" content="#01040f">
+
+  <!-- Link preview (LinkedIn, WhatsApp, Telegram, Facebook, X...).
+       These links must be full addresses, so update them if the site address changes. -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://salim-ad.netlify.app/">
+  <meta property="og:title" content="SALIM AD | Finance Student &amp; Web Developer">
+  <meta property="og:description" content="Accounting & Finance student in Addis Ababa, building for the web with HTML, CSS, JavaScript and Python.">
+  <meta property="og:image" content="https://salim-ad.netlify.app/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="SALIM AD, Accounting & Finance student building for the web">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="SALIM AD | Finance Student &amp; Web Developer">
+  <meta name="twitter:description" content="Accounting & Finance student in Addis Ababa, building for the web with HTML, CSS, JavaScript and Python.">
+  <meta name="twitter:image" content="https://salim-ad.netlify.app/og-image.png">
+
+  <!-- Fonts: Geist (body), Geist Mono (code/numbers), Instrument Serif (italic accents) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Apply the saved theme before the page paints, so it doesn't flash -->
+  <script>
+    try {
+      var saved = localStorage.getItem("theme");
+      if (saved) document.documentElement.dataset.theme = saved;
+    } catch (e) {}
+  </script>
+</head>
+<body>
+
+  <!-- Decorative grid in the background -->
+  <div class="bg-grid" aria-hidden="true"></div>
+  <div class="bg-glow" aria-hidden="true"></div>
+
+  <!-- ========== NAVIGATION (floating pill) ========== -->
+  <header class="nav-wrap">
+    <nav class="nav">
+      <a href="#home" class="logo">S<span>.</span>AD</a>
+
+      <div class="nav-links" id="navLinks">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Work</a>
+        <a href="#journey">Journey</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+      <div class="nav-actions">
+        <button class="icon-btn" id="themeBtn" aria-label="Switch light/dark theme">
+          <!-- sun icon (shown in dark mode) -->
+          <svg class="icon-sun" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+          <!-- moon icon (shown in light mode) -->
+          <svg class="icon-moon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+        </button>
+        <button class="icon-btn menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ========== HERO ========== -->
+    <section id="home" class="hero">
+      <div class="hero-text">
+        <p class="status"><span class="pulse"></span> Currently learning JavaScript</p>
+        <p class="hero-name">SALIM AD · Addis Ababa, Ethiopia</p>
+        <h1>Balancing books <em>and</em> building for the web.</h1>
+        <p class="hero-lead">
+          I'm a first-year Accounting &amp; Finance student at St. Mary's University,
+          teaching myself to code. I want to work where business and technology meet.
+        </p>
+        <div class="hero-buttons">
+          <a href="#projects" class="btn btn-primary">See my work
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+          </a>
+          <a href="https://github.com/salimahmed-dev" target="_blank" rel="noopener" class="btn btn-ghost">GitHub</a>
+        </div>
+      </div>
+
+      <!-- A little "code editor" card describing me as a JavaScript object -->
+      <div class="code-card" aria-label="About me, written as code">
+        <div class="code-top">
+          <span class="dots"><i></i><i></i><i></i></span>
+          <span class="file">salim.js</span>
+        </div>
+        <pre><code><span class="line" style="--i:0"><span class="k">const</span> <span class="v">salim</span> = {</span>
+<span class="line" style="--i:1">  <span class="p">based</span>: <span class="s">"Addis Ababa, ET"</span>,</span>
+<span class="line" style="--i:2">  <span class="p">studying</span>: <span class="s">"Accounting &amp; Finance"</span>,</span>
+<span class="line" style="--i:3">  <span class="p">year</span>: <span class="n">1</span>,</span>
+<span class="line" style="--i:4">  <span class="p">learning</span>: [<span class="s">"HTML"</span>, <span class="s">"CSS"</span>, <span class="s">"JS"</span>, <span class="s">"Python"</span>],</span>
+<span class="line" style="--i:5">  <span class="p">nextUp</span>: <span class="s">"Graphic design"</span>,</span>
+<span class="line" style="--i:6">  <span class="p">mission</span>: <span class="s">"business + code"</span>,</span>
+<span class="line" style="--i:7">};</span>
+<span class="line" style="--i:8"><span class="c">// still compiling…</span><span class="caret"></span></span></code></pre>
+      </div>
+    </section>
+
+    <!-- ========== SCROLLING SKILLS STRIP ========== -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <!-- The list is written twice so the loop looks seamless -->
+        <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Python</span><span>Pandas</span><span>NumPy</span><span>Excel</span><span>Git &amp; GitHub</span><span>Business planning</span><span>Financial accounting</span><span>Graphic design</span>
+        <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Python</span><span>Pandas</span><span>NumPy</span><span>Excel</span><span>Git &amp; GitHub</span><span>Business planning</span><span>Financial accounting</span><span>Graphic design</span>
+      </div>
+    </div>
+
+    <!-- ========== ABOUT (bento grid) ========== -->
+    <section id="about" class="section">
+      <div class="section-head reveal">
+        <span class="kicker">01 — About</span>
+        <h2>A finance mind, <em>learning</em> to code.</h2>
+      </div>
+
+      <div class="bento">
+        <article class="card bento-bio reveal">
+          <img src="me.jpg" alt="SALIM AD" class="avatar" width="88" height="88">
+          <p class="bio-hello">Hi, I'm Salim <span class="wave" aria-hidden="true">👋</span></p>
+          <p>
+            I study <strong>Accounting and Finance</strong> at St. Mary's University in Addis Ababa.
+            Outside class, I'm teaching myself to build for the web with HTML, CSS and JavaScript,
+            mostly through <strong>freeCodeCamp</strong>.
+          </p>
+          <p>
+            I started with zero coding experience. Now I'm also working through a
+            16-week Python and data analytics roadmap, focused on business data,
+            and sharpening my <strong>Excel</strong> skills along the way.
+            Graphic design is next on the list.
+          </p>
+        </article>
+
+        <article class="card bento-clock reveal">
+          <span class="card-label">Local time · Addis Ababa</span>
+          <p class="clock" id="clock">--:--</p>
+          <span class="card-foot">EAT (UTC+3)</span>
+        </article>
+
+        <article class="card bento-uni reveal">
+          <span class="card-label">Studying</span>
+          <p class="big">St. Mary's University</p>
+          <span class="card-foot">Year 1 · Accounting &amp; Finance</span>
+        </article>
+
+        <article class="card bento-now reveal">
+          <span class="card-label">Right now</span>
+          <ul class="now-list">
+            <li><span class="tick"></span>JavaScript on freeCodeCamp</li>
+            <li><span class="tick"></span>Python &amp; Pandas for business data</li>
+            <li><span class="tick"></span>Excel for analysis</li>
+            <li><span class="tick off"></span>Graphic design (next up)</li>
+          </ul>
+        </article>
+
+        <article class="card bento-venn reveal">
+          <span class="card-label">Where I'm headed</span>
+          <div class="venn" aria-label="Business, code and design overlapping">
+            <span class="ring r1">Business</span>
+            <span class="ring r2">Code</span>
+            <span class="ring r3">Design</span>
+            <span class="venn-me">me</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ========== SKILLS (styled like a balance sheet) ========== -->
+    <section id="skills" class="section">
+      <div class="section-head reveal">
+        <span class="kicker">02 — Skills</span>
+        <h2>The balance sheet.</h2>
+        <p class="section-sub">My skills, booked honestly. Every one of these is still going up in value.</p>
+      </div>
+
+      <!-- To change a level, edit the --level number (0 to 100) on that row -->
+      <div class="ledger reveal" role="table" aria-label="Skills and levels">
+        <div class="ledger-row ledger-head" role="row">
+          <span role="columnheader">Account</span>
+          <span role="columnheader">Category</span>
+          <span role="columnheader">Status</span>
+          <span role="columnheader">Balance</span>
+        </div>
+        <div class="ledger-row" role="row" style="--level:45">
+          <span class="acct" role="cell">HTML</span><span class="cat" role="cell">Web</span><span class="state" role="cell">Learning</span>
+          <span class="bal" role="cell"><span class="meter"><i></i></span><b data-count="45">0</b></span>
+        </div>
+        <div class="ledger-row" role="row" style="--level:35">
+          <span class="acct" role="cell">CSS</span><span class="cat" role="cell">Web</span><span class="state" role="cell">Learning</span>
+          <span class="bal" role="cell"><span class="meter"><i></i></span><b data-count="35">0</b></span>
+        </div>
+        <div class="ledger-row" role="row" style="--level:15">
+          <span class="acct" role="cell">JavaScript</span><span class="cat" role="cell">Web</span><span class="state" role="cell">Just started</span>
+          <span class="bal" role="cell"><span class="meter"><i></i></span><b data-count="15">0</b></span>
+        </div>
+        <div class="ledger-row" role="row" style="--level:15">
+          <span class="acct" role="cell">Python</span><span class="cat" role="cell">Data</span><span class="state" role="cell">Just started</span>
+          <span class="bal" role="cell"><span class="meter"><i></i></span><b data-count="15">0</b></span>
+        </div>
+        <div class="ledger-row" role="row" style="--level:30">
+          <span class="acct" role="cell">Excel</span><span class="cat" role="cell">Data</span><span class="state" role="cell">Practising</span>
+          <span class="bal" role="cell"><span class="meter"><i></i></span><b data-count="30">0</b></span>
+        </div>
+        <div class="ledger-row" role="row" style="--level:25">
+          <span class="acct" role="cell">Git &amp; GitHub</span><span class="cat" role="cell">Tools</span><span class="state" role="cell">Learning</span>
+          <span class="bal" role="cell"><span class="meter"><i></i></span><b data-count="25">0</b></span>
+        </div>
+        <div class="ledger-row ledger-total" role="row">
+          <span class="acct" role="cell">Total</span><span role="cell"></span><span role="cell"></span>
+          <span class="bal" role="cell"><b>Appreciating ↑</b></span>
+        </div>
+      </div>
+
+      <div class="also reveal">
+        <span class="also-label">Also on the books</span>
+        <div class="chips">
+          <span>Business planning</span>
+          <span>Financial accounting</span>
+          <span>Pandas</span>
+          <span>NumPy</span>
+          <span>Jupyter</span>
+          <span class="pending">Graphic design · pending</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== PROJECTS ========== -->
+    <section id="projects" class="section">
+      <div class="section-head reveal">
+        <span class="kicker">03 — Work</span>
+        <h2>Things I've <em>made</em>.</h2>
+      </div>
+
+      <div class="projects">
+
+        <!-- Project 1: wide card -->
+        <article class="card project wide reveal">
+          <div class="project-body">
+            <div class="project-meta"><span>Web</span><span class="badge live">Live</span></div>
+            <h3>Personal Portfolio</h3>
+            <p>This website. Hand-coded with plain HTML, CSS and JavaScript: responsive layout, light and dark themes, a live clock and scroll animations.</p>
+            <div class="tech"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+            <a href="https://github.com/salimahmed-dev/portfolio" target="_blank" rel="noopener" class="project-link">View code <span>→</span></a>
+          </div>
+          <div class="project-visual" aria-hidden="true">
+            <div class="browser">
+              <div class="browser-bar"><i></i><i></i><i></i><span></span></div>
+              <div class="browser-page">
+                <div class="mock-h"></div>
+                <div class="mock-l w80"></div>
+                <div class="mock-l w60"></div>
+                <div class="mock-grid"><i></i><i></i><i></i></div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 2 -->
+        <article class="card project reveal">
+          <div class="project-visual small" aria-hidden="true">
+            <svg class="orbit" viewBox="0 0 200 120">
+              <circle cx="100" cy="60" r="42" fill="none" stroke="currentColor" stroke-width="1.5" stroke-dasharray="4 6" opacity=".5"/>
+              <g class="orbit-spin">
+                <circle cx="100" cy="18" r="7" class="o1"/>
+                <circle cx="136" cy="81" r="7" class="o2"/>
+                <circle cx="64" cy="81" r="7" class="o3"/>
+              </g>
+              <text x="100" y="65" text-anchor="middle" class="orbit-text">waste → art</text>
+            </svg>
+          </div>
+          <div class="project-body">
+            <div class="project-meta"><span>Business</span><span class="badge live">Completed</span></div>
+            <h3>Waste Dizo-Art Business Plan</h3>
+            <p>A business plan for upcycling packaging waste into art and useful products, covering the market, operations and financials.</p>
+            <div class="tech"><span>Business plan</span><span>Finance</span></div>
+          </div>
+        </article>
+
+        <!-- Project 3 -->
+        <article class="card project reveal">
+          <div class="project-visual small" aria-hidden="true">
+            <!-- Decorative bars only, not real results -->
+            <svg class="bars" viewBox="0 0 200 120">
+              <line x1="20" y1="104" x2="180" y2="104" stroke="currentColor" opacity=".3"/>
+              <rect x="30"  y="64" width="18" height="40" rx="3" style="--d:0"/>
+              <rect x="58"  y="44" width="18" height="60" rx="3" style="--d:1"/>
+              <rect x="86"  y="74" width="18" height="30" rx="3" style="--d:2"/>
+              <rect x="114" y="34" width="18" height="70" rx="3" style="--d:3"/>
+              <rect x="142" y="20" width="18" height="84" rx="3" style="--d:4" class="hi"/>
+            </svg>
+          </div>
+          <div class="project-body">
+            <div class="project-meta"><span>Data</span><span class="badge wip">In progress</span></div>
+            <h3>Superstore Sales Analysis</h3>
+            <p>My first data project: exploring a Kaggle retail dataset with Python to find which products, regions and seasons drive profit.</p>
+            <div class="tech"><span>Python</span><span>Pandas</span><span>Jupyter</span></div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ========== JOURNEY ========== -->
+    <section id="journey" class="section">
+      <div class="section-head reveal">
+        <span class="kicker">04 — Journey</span>
+        <h2>So far, <em>so good.</em></h2>
+      </div>
+
+      <ol class="timeline">
+        <li class="reveal">
+          <span class="when">2026</span>
+          <h3>Started university</h3>
+          <p>Began my Accounting and Finance degree at St. Mary's University.</p>
+        </li>
+        <li class="reveal">
+          <span class="when">2026</span>
+          <h3>First line of code</h3>
+          <p>Started a 16-week Python and data analytics roadmap from zero.</p>
+        </li>
+        <li class="reveal">
+          <span class="when">2026</span>
+          <h3>Picked up the web</h3>
+          <p>Learning HTML, CSS and JS on freeCodeCamp. Set up GitHub and built this site.</p>
+        </li>
+        <li class="next reveal">
+          <span class="when">Next</span>
+          <h3>What's coming</h3>
+          <p>More web projects, finishing my first data analysis, and learning graphic design.</p>
+        </li>
+      </ol>
+    </section>
+
+    <!-- ========== CONTACT ========== -->
+    <section id="contact" class="section contact">
+     <div class="contact-panel">
+      <div class="section-head reveal">
+        <span class="kicker">05 — Contact</span>
+        <h2 class="contact-title">Let's <em>connect.</em></h2>
+        <p class="section-sub">Open to learning opportunities, collaborations, and a good conversation about code or business.</p>
+      </div>
+
+      <!-- App-style icon tiles. --brand sets each tile's hover glow color. -->
+      <div class="apps reveal">
+        <a class="app" href="mailto:selymahmd@gmail.com" style="--brand:#ea4335">
+          <span class="app-icon gmail">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+          </span>
+          <span class="app-name">Gmail</span>
+          <span class="app-handle">Email me</span>
+        </a>
+
+        <a class="app" href="https://www.linkedin.com/in/salim-ad-16b72234b" target="_blank" rel="noopener" style="--brand:#0a66c2">
+          <span class="app-icon linkedin">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          </span>
+          <span class="app-name">LinkedIn</span>
+          <span class="app-handle">SALIM AD</span>
+        </a>
+
+        <a class="app" href="https://github.com/salimahmed-dev" target="_blank" rel="noopener" style="--brand:#8b9cc4">
+          <span class="app-icon github">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.4 5.4 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+          </span>
+          <span class="app-name">GitHub</span>
+          <span class="app-handle">@salimahmed-dev</span>
+        </a>
+
+        <a class="app" href="https://instagram.com/selymahmd" target="_blank" rel="noopener" style="--brand:#d6249f">
+          <span class="app-icon instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><path d="M17.5 6.5h.01"/></svg>
+          </span>
+          <span class="app-name">Instagram</span>
+          <span class="app-handle">@selymahmd</span>
+        </a>
+      </div>
+     </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p>© <span id="year"></span> SALIM AD · Hand-built with HTML, CSS &amp; JS in Addis Ababa</p>
+    <a href="#home" class="to-top">Back to top ↑</a>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
